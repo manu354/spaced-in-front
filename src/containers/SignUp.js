@@ -51,7 +51,7 @@ class SignUp extends React.Component {
         <div className="app-login-main-content">
           <div className="app-logo-content d-flex align-items-center justify-content-center">
             <Link className="logo-lg" to="/" title="Jambo">
-              <img src={require("assets/images/logo.png")} alt="jambo" title="jambo"/>
+              <img src={require("assets/images/logo4.png")} alt="jambo" title="jambo"/>
             </Link>
           </div>
 
@@ -61,20 +61,20 @@ class SignUp extends React.Component {
             </div>
 
             <div className="mb-4">
-              <h2><IntlMessages id="appModule.createAccount"/></h2>
+              <h5><IntlMessages id="Authorize with Google Keep"/></h5>
             </div>
 
             <div className="app-login-form">
               <form method="post" action="/">
-                <TextField
-                  type="text"
-                  label="Name"
-                  onChange={(event) => this.setState({name: event.target.value})}
-                  fullWidth
-                  defaultValue={name}
-                  margin="normal"
-                  className="mt-0 mb-2"
-                />
+                {/*<TextField*/}
+                  {/*type="text"*/}
+                  {/*label="Name"*/}
+                  {/*onChange={(event) => this.setState({name: event.target.value})}*/}
+                  {/*fullWidth*/}
+                  {/*defaultValue={name}*/}
+                  {/*margin="normal"*/}
+                  {/*className="mt-0 mb-2"*/}
+                {/*/>*/}
 
                 <TextField
                   type="email"
@@ -105,54 +105,8 @@ class SignUp extends React.Component {
                       id="appModule.regsiter"/>
                   </Button>
                   <Link to="/signin">
-                    <IntlMessages id="signUp.alreadyMember"/>
+                    <IntlMessages id="Sign In Instead"/>
                   </Link>
-                </div>
-                <div className="app-social-block my-1 my-sm-3">
-                  <IntlMessages
-                    id="signIn.connectWith"/>
-                  <ul className="social-link">
-                    <li>
-                      <IconButton className="icon"
-                                  onClick={() => {
-                                    this.props.showAuthLoader();
-                                    this.props.userFacebookSignIn();
-                                  }}>
-                        <i className="zmdi zmdi-facebook"/>
-                      </IconButton>
-                    </li>
-
-                    <li>
-                      <IconButton className="icon"
-                                  onClick={() => {
-                                    this.props.showAuthLoader();
-                                    this.props.userTwitterSignIn();
-                                  }}>
-                        <i className="zmdi zmdi-twitter"/>
-                      </IconButton>
-                    </li>
-
-                    <li>
-                      <IconButton className="icon"
-                                  onClick={() => {
-                                    this.props.showAuthLoader();
-                                    this.props.userGoogleSignIn();
-
-                                  }}>
-                        <i className="zmdi zmdi-google-plus"/>
-                      </IconButton>
-                    </li>
-
-                    <li>
-                      <IconButton className="icon"
-                                  onClick={() => {
-                                    this.props.showAuthLoader();
-                                    this.props.userGithubSignIn();
-                                  }}>
-                        <i className="zmdi zmdi-github"/>
-                      </IconButton>
-                    </li>
-                  </ul>
                 </div>
 
               </form>

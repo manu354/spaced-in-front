@@ -32,6 +32,11 @@ body.ios-mobile-view-height {
   z-index: 5000 !important;
 }
 
+.logo-lg img {
+  width : 100%;
+  height : auto;
+}
+
 #nprogress .spinner-icon {
   border-top-color: $secondary !important;
   border-left-color: $secondary !important;

@@ -158,7 +158,7 @@ class Header extends React.Component {
           }
 
           <Link className="app-logo mr-2 d-none d-sm-block" to="/">
-            <img src={require("assets/images/logo.png")} alt="Jambo" title="Jambo"/>
+            <img src={require("assets/images/logo4.png")} alt="Jambo" title="Jambo"/>
           </Link>
 
 
@@ -169,49 +169,8 @@ class Header extends React.Component {
           <Menu/>}
 
           <ul className="header-notifications list-inline ml-auto">
-            <li className="list-inline-item">
-              <Dropdown
-                className="quick-menu app-notification"
-                isOpen={this.state.apps}
-                toggle={this.onAppsSelect.bind(this)}>
 
-                <DropdownToggle
-                  className="d-inline-block"
-                  tag="span"
-                  data-toggle="dropdown">
-                  <span className="app-notification-menu">
-                    <i className="zmdi zmdi-apps zmdi-hc-fw zmdi-hc-lg"/>
-                    <span>Apps</span>
-                  </span>
-                </DropdownToggle>
 
-                <DropdownMenu>
-                  {this.Apps()}
-                </DropdownMenu>
-              </Dropdown>
-            </li>
-            <li className="d-inline-block d-lg-none list-inline-item">
-              <Dropdown
-                className="quick-menu nav-searchbox"
-                isOpen={this.state.searchBox}
-                toggle={this.onSearchBoxSelect.bind(this)}>
-
-                <DropdownToggle
-                  className="d-inline-block"
-                  tag="span"
-                  data-toggle="dropdown">
-                  <IconButton className="icon-btn">
-                    <i className="zmdi zmdi-search zmdi-hc-fw"/>
-                  </IconButton>
-                </DropdownToggle>
-
-                <DropdownMenu right className="p-0">
-                  <SearchBox styleName="search-dropdown" placeholder=""
-                             onChange={this.updateSearchText.bind(this)}
-                             value={this.state.searchText}/>
-                </DropdownMenu>
-              </Dropdown>
-            </li>
             <li className="list-inline-item">
               <Dropdown
                 className="quick-menu"
@@ -257,30 +216,7 @@ class Header extends React.Component {
                 </DropdownMenu>
               </Dropdown>
             </li>
-            <li className="list-inline-item mail-tour">
-              <Dropdown
-                className="quick-menu"
-                isOpen={this.state.mailNotification}
-                toggle={this.onMailNotificationSelect.bind(this)}
-              >
-                <DropdownToggle
-                  className="d-inline-block"
-                  tag="span"
-                  data-toggle="dropdown">
 
-                  <IconButton className="icon-btn">
-                    <i className="zmdi zmdi-comment-alt-text zmdi-hc-fw"/>
-                  </IconButton>
-                </DropdownToggle>
-
-
-                <DropdownMenu right>
-                  <CardHeader styleName="align-items-center"
-                              heading={<IntlMessages id="mailNotification.title"/>}/>
-                  <MailNotification/>
-                </DropdownMenu>
-              </Dropdown>
-            </li>
 
             {navigationStyle === HORIZONTAL_NAVIGATION &&
             <li className="list-inline-item user-nav">

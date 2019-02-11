@@ -4,7 +4,7 @@ import WelComeCard from "./WelComeCard";
 import CardBox from "components/CardBox";
 import SiteAudience from "./SiteAudience";
 import Widget from "components/Widget/index";
-import ContainerHeader from "components/ContainerHeader/index";
+
 import IntlMessages from "util/IntlMessages";
 import {recentList} from "./data2";
 import RecentActivities from 'components/dashboard/Common/RecentActivities/index';
@@ -22,7 +22,6 @@ const CRM = ({match}) => {
 
 		<div className="dashboard animated slideInUpTiny animation-duration-3">
 
-			<ContainerHeader match={match} title={<IntlMessages id="sidebar.dashboard.crm"/>}/>
 			<div className="row">
 				<div className="col-xl-12 col-lg-12 col-md-12 col-12">
 					<Widget styleName="p-4">
@@ -41,9 +40,9 @@ const CRM = ({match}) => {
 						</div>
 					</Widget>
 				</div>
-				<div>
-					<Recents/>
-				</div>
+				{/*<div>*/}
+					{/*<Recents/>*/}
+				{/*</div>*/}
 				<div className="col-xl-5  col-md-8 col-12">
 					<div className="jr-card">
 						<CardHeader heading={<IntlMessages id="dashboard.recentActivities"/>}
